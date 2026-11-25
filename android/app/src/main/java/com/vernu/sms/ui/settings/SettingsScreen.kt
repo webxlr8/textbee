@@ -297,7 +297,7 @@ fun SettingsScreen(
                 icon = Icons.Default.SupportAgent,
                 title = "Get Support",
                 onClick = {
-                    Links.open(context, "https://app.textbee.dev/dashboard/account/get-support")
+                    Links.open(context, "https://textbee.wx8.org/dashboard/account/get-support")
                 },
                 trailing = {
                     Icon(Icons.Default.OpenInBrowser, contentDescription = null,

@@ -22,7 +22,20 @@ android {
 //            }
 //        }
     }
+    // WebXLR8: release builds are signed with our own key when android/keystore.properties exists
+    // (storeFile, storePassword, keyAlias, keyPassword; kept outside git), else the debug key.
+    def keystorePropsFile = rootProject.file("keystore.properties")
+    def keystoreProps = new Properties()
+    if (keystorePropsFile.exists()) keystoreProps.load(new FileInputStream(keystorePropsFile))
     signingConfigs {
+        if (keystorePropsFile.exists()) {
+            wx8release {
+                storeFile file(keystoreProps['storeFile'])
+                storePassword keystoreProps['storePassword']
+                keyAlias keystoreProps['keyAlias']
+                keyPassword keystoreProps['keyPassword']
+            }
+        }
         debug {
             storeFile file("${System.getenv("HOME")}/.android/debug.keystore")
             storePassword "android"
@@ -35,8 +48,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            // TODO: Change to release signing config
-            signingConfig signingConfigs.debug
+            signingConfig keystorePropsFile.exists() ? signingConfigs.wx8release : signingConfigs.debug
             manifestPlaceholders = [crashReportsEnabled: "true"]
         }
         debug {
@@ -62,7 +74,7 @@ android {
         prod {
             dimension "environment"
             applicationId "com.vernu.sms"
-            buildConfigField "String", "API_BASE_URL", '"https://api.textbee.dev/api/v1/"'
+            buildConfigField "String", "API_BASE_URL", '"https://textbee.wx8.org/api/v1/"'
             buildConfigField "String", "ENVIRONMENT", '"production"'
             resValue "string", "app_name", "textbee.dev"
         }

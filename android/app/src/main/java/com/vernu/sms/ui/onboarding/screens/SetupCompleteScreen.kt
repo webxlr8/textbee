@@ -277,7 +277,7 @@ fun SetupCompleteScreen(
 
         // Wraps on narrow screens and large font sizes
         FlowRow(horizontalArrangement = Arrangement.Center) {
-            FooterLink("Web dashboard", "https://app.textbee.dev/dashboard")
+            FooterLink("Web dashboard", "https://textbee.wx8.org/dashboard")
             FooterDot()
             FooterLink("Docs", "https://textbee.dev/docs")
             FooterDot()

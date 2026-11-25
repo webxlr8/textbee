@@ -699,7 +699,7 @@ private fun SubscriptionCard(
                         } else {
                             TextButton(
                                 onClick = {
-                                    Links.open(context, "https://app.textbee.dev/dashboard/account")
+                                    Links.open(context, "https://textbee.wx8.org/dashboard/account")
                                 }
                             ) {
                                 Text("Manage")
@@ -800,7 +800,7 @@ private fun QuickActionsSection() {
         ) {
             OutlinedButton(
                 onClick = {
-                    Links.open(context, "https://app.textbee.dev/dashboard")
+                    Links.open(context, "https://textbee.wx8.org/dashboard")
                 },
                 modifier = Modifier.weight(1f)
             ) {

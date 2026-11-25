@@ -64,7 +64,7 @@ class OnboardingActivity : ComponentActivity() {
                     onExit = { finish() },
                     onScanQr = {
                         qrLauncher.launch(ScanOptions().apply {
-                            setPrompt("Scan the QR code from textbee.dev/dashboard")
+                            setPrompt("Scan the QR code from textbee.wx8.org/dashboard")
                             setBeepEnabled(true)
                             setOrientationLocked(false)
                         })

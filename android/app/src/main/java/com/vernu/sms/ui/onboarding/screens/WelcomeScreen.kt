@@ -69,7 +69,7 @@ fun WelcomeScreen(
             verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             listOf(
-                "Create a free account at textbee.dev",
+                "Create an account at textbee.wx8.org",
                 "Connect this phone as your SMS gateway",
                 "Send SMS via API from any app or automation"
             ).forEachIndexed { i, step ->
@@ -119,7 +119,7 @@ fun WelcomeScreen(
 
         TextButton(
             onClick = {
-                Links.open(context, "https://app.textbee.dev/register")
+                Links.open(context, "https://textbee.wx8.org/register")
             }
         ) {
             Text(

@@ -89,7 +89,7 @@ fun CredentialsScreen(
                 )
                 if (!adding) TextButton(
                     onClick = {
-                        Links.open(context, "https://app.textbee.dev/register")
+                        Links.open(context, "https://textbee.wx8.org/register")
                     },
                     contentPadding = PaddingValues(0.dp)
                 ) {
@@ -194,7 +194,7 @@ private fun QrTab(
                 )
                 TextButton(
                     onClick = {
-                        Links.open(context, "https://app.textbee.dev/dashboard")
+                        Links.open(context, "https://textbee.wx8.org/dashboard")
                     },
                     contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
                 ) {
@@ -308,7 +308,7 @@ private fun ManualTab(
     )
     TextButton(
         onClick = {
-            Links.open(context, "https://app.textbee.dev/dashboard")
+            Links.open(context, "https://textbee.wx8.org/dashboard")
         },
         contentPadding = PaddingValues(0.dp)
     ) {

@@ -7,3 +7,6 @@
 .omc/
 # Rendered email previews (pnpm preview:emails)
 api/tmp/
+
+# Built gateway APKs (WebXLR8)
+/release/

@@ -75,7 +75,7 @@ fun DeviceSetupScreen(
                         onValueChange = { viewModel.setDeviceId(it) },
                         label = { Text("Device ID") },
                         placeholder = { Text("Enter your Device ID") },
-                        supportingText = { Text("Find it at textbee.dev/dashboard → Devices") },
+                        supportingText = { Text("Find it at textbee.wx8.org/dashboard → Devices") },
                         modifier = Modifier.fillMaxWidth(),
                         singleLine = true
                     )

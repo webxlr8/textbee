@@ -20,3 +20,7 @@ local.properties
 /app/src/main/assets/adi-registration.properties
 # local release output
 /app/prod/
+
+# WebXLR8 release signing (never commit)
+/keystore.properties
+*.jks
